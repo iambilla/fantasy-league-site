@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fantasy League Standings</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; }
+    h1 { color: #333; }
+    table { border-collapse: collapse; width: 60%; }
+    th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>🏆 League Standings</h1>
+  <table>
+    <tr>
+      <th>Team</th>
+      <th>Record</th>
+      <th>Points For</th>
+    </tr>
+    {% for team in teams %}
+    <tr>
+      <td>{{ team.name }}</td>
+      <td>{{ team.wins }} - {{ team.losses }}</td>
+      <td>{{ team.points }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
